@@ -95,3 +95,19 @@ const addVal = (key: string, val: any) => store.set(key, _.union(store.get(key),
 
 const removeVal = (key: string, val: any) => store.set(key, _.without(store.get(key), val));
 ```
+
+## proxy pattern
+
+proxy pattern contain a huge range of concepts
+
+one of them I call it `f(1)` pattern
+
+it is easy to understand:
+
+`f(n)` pattern:
+
+`1 -> n`, then we got some problems, so it turn out to be `1 -> f(n)`
+
+`f(1)` pattern:
+
+`1 -> n`, then we got some problems, so it turn out to be `1 -> f(1) -> n`
