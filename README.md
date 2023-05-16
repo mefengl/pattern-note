@@ -63,3 +63,35 @@ console.log(circle.area); // 314.1592653589793
 In this example, a `Circle` class is defined. The `radius` property is controlled with getter and setter. The getter simply returns the `_radius` value, while the setter validates that the radius is not set to a negative or zero value. There's also an `area` getter, which computes the area of the circle using its radius.
 
 The MDN Web Docs is a great resource to learn about getters and setters in JavaScript: [MDN Web Docs: Getter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [MDN Web Docs: Setter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set).
+
+## adder-remover pattern
+
+```javascript
+const add = (store: any, key: string, id: string) => {
+  const ids = store.get(key);
+  if (!_.includes(ids, id)) {
+    store.set(key, _.concat(ids, id));
+  }
+};
+
+const remove = (store: any, key: string, id: string) => {
+  const ids = store.get(key);
+  if (_.includes(ids, id)) {
+    store.set(key, _.without(ids, id));
+  }
+};
+```
+
+```javascript
+const addVal = (key: string, val: any) => !_.includes(store.get(key), val) && store.set(key, _.concat(store.get(key), val));
+
+const removeVal = (key: string, val: any) => _.includes(store.get(key), val) && store.set(key, _.without(store.get(key), val));
+```
+
+above two blocks are equivalent, it includes the condition check in the function body, but that is not necessary:
+
+```javascript
+const addVal = (key: string, val: any) => store.set(key, _.union(store.get(key), [val]));
+
+const removeVal = (key: string, val: any) => store.set(key, _.without(store.get(key), val));
+```
