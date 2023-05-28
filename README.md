@@ -111,3 +111,7 @@ it is easy to understand:
 `f(1)` pattern:
 
 `1 -> n`, then we got some problems, so it turn out to be `1 -> f(1) -> n`
+
+## table pattern
+
+table itself manage the query params(like `page`, `pageSize`, `sort`, `pagination`)
