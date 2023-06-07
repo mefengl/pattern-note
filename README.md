@@ -115,3 +115,9 @@ it is easy to understand:
 ## table pattern
 
 table itself manage the query params(like `page`, `pageSize`, `sort`, `pagination`)
+
+## restful pattern
+
+even in native app, we can use restful pattern to separate the rendering and the data, the action to the data will all be async, just like the web app
+
+https://medium.com/@mefengl/creating-a-restful-like-api-for-interprocess-communication-in-electron-ddc36ff13d95
