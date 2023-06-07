@@ -121,3 +121,7 @@ table itself manage the query params(like `page`, `pageSize`, `sort`, `paginatio
 even in native app, we can use restful pattern to separate the rendering and the data, the action to the data will all be async, just like the web app
 
 https://medium.com/@mefengl/creating-a-restful-like-api-for-interprocess-communication-in-electron-ddc36ff13d95
+
+## note pattern
+
+Write a sentence to show the idea, use link to show the detail (use ChatGPT to write a blog post for detail, use Medium to get the link)
