@@ -125,3 +125,7 @@ https://medium.com/@mefengl/creating-a-restful-like-api-for-interprocess-communi
 ## note pattern
 
 Write a sentence to show the idea, use link to show the detail (use ChatGPT to write a blog post for detail, use Medium to get the link)
+
+## data flow pattern
+
+`xyz` data comes from `x, y, z`, so should not store `xyz` in the store, just store `x, y, z` in the store, and `xyz` can be computed from `x, y, z`
