@@ -129,3 +129,9 @@ Write a sentence to show the idea, use link to show the detail (use ChatGPT to w
 ## data flow pattern
 
 `xyz` data comes from `x, y, z`, so should not store `xyz` in the store, just store `x, y, z` in the store, and `xyz` can be computed from `x, y, z`
+
+## return same type pattern
+
+1. don't return `undefined` or `null`, return the same type, like `[]` or `{}`
+
+2. in selector, even if it's single selector, return `[value]` instead of `value`
